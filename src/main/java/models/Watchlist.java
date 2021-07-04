@@ -177,4 +177,27 @@ public class Watchlist {
     public int hashCode() {
         return Objects.hash(id, poster, media_type, title, description, year, release_date, imdb_id, imdb_rating, vote_count, youtube_trailer_key, runtime, createdAt, stars, directors, creators, added_by);
     }
+
+    @Override
+    public String toString() {
+        return "Watchlist{" +
+                "id=" + id +
+                ", poster='" + poster + '\'' +
+                ", media_type='" + media_type + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", year='" + year + '\'' +
+                ", release_date='" + release_date + '\'' +
+                ", imdb_id='" + imdb_id + '\'' +
+                ", imdb_rating='" + imdb_rating + '\'' +
+                ", vote_count='" + vote_count + '\'' +
+                ", youtube_trailer_key='" + youtube_trailer_key + '\'' +
+                ", runtime=" + runtime +
+                ", createdAt=" + createdAt +
+                ", stars=" + stars +
+                ", directors=" + directors +
+                ", creators=" + creators +
+                ", added_by=" + added_by +
+                '}';
+    }
 }
