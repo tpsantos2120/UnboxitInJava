@@ -6,6 +6,7 @@ import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 public class User {
 
@@ -81,5 +82,18 @@ public class User {
 
     public void setWatchlistId(ArrayList<Watchlist> watchlistId) {
         this.watchlistId = watchlistId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id.equals(user.id) && firstName.equals(user.firstName) && lastName.equals(user.lastName) && username.equals(user.username) && email.equals(user.email) && password.equals(user.password) && createdAt.equals(user.createdAt) && watchlistId.equals(user.watchlistId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, username, email, password, createdAt, watchlistId);
     }
 }

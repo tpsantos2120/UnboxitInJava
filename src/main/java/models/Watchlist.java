@@ -6,6 +6,7 @@ import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 public class Watchlist {
 
@@ -162,5 +163,18 @@ public class Watchlist {
 
     public void setAdded_by(ArrayList<String> added_by) {
         this.added_by = added_by;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Watchlist watchlist = (Watchlist) o;
+        return runtime == watchlist.runtime && id.equals(watchlist.id) && poster.equals(watchlist.poster) && media_type.equals(watchlist.media_type) && title.equals(watchlist.title) && description.equals(watchlist.description) && year.equals(watchlist.year) && release_date.equals(watchlist.release_date) && imdb_id.equals(watchlist.imdb_id) && imdb_rating.equals(watchlist.imdb_rating) && vote_count.equals(watchlist.vote_count) && youtube_trailer_key.equals(watchlist.youtube_trailer_key) && createdAt.equals(watchlist.createdAt) && stars.equals(watchlist.stars) && directors.equals(watchlist.directors) && creators.equals(watchlist.creators) && added_by.equals(watchlist.added_by);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, poster, media_type, title, description, year, release_date, imdb_id, imdb_rating, vote_count, youtube_trailer_key, runtime, createdAt, stars, directors, creators, added_by);
     }
 }
