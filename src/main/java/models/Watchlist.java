@@ -33,136 +33,153 @@ public class Watchlist {
         return id;
     }
 
-    public void setId(ObjectId id) {
+    public Watchlist setId(ObjectId id) {
         this.id = id;
+        return this;
     }
 
     public String getPoster() {
         return poster;
     }
 
-    public void setPoster(String poster) {
+    public Watchlist setPoster(String poster) {
         this.poster = poster;
+        return this;
     }
 
     public String getMedia_type() {
         return media_type;
     }
 
-    public void setMedia_type(String media_type) {
+    public Watchlist setMedia_type(String media_type) {
         this.media_type = media_type;
+        return this;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public Watchlist setTitle(String title) {
         this.title = title;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public Watchlist setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public String getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public Watchlist setYear(String year) {
         this.year = year;
+        return this;
     }
 
     public String getRelease_date() {
         return release_date;
     }
 
-    public void setRelease_date(String release_date) {
+    public Watchlist setRelease_date(String release_date) {
         this.release_date = release_date;
+        return this;
     }
 
     public String getImdb_id() {
         return imdb_id;
     }
 
-    public void setImdb_id(String imdb_id) {
+    public Watchlist setImdb_id(String imdb_id) {
         this.imdb_id = imdb_id;
+        return this;
     }
 
     public String getImdb_rating() {
         return imdb_rating;
     }
 
-    public void setImdb_rating(String imdb_rating) {
+    public Watchlist setImdb_rating(String imdb_rating) {
         this.imdb_rating = imdb_rating;
+        return this;
     }
 
     public String getVote_count() {
         return vote_count;
     }
 
-    public void setVote_count(String vote_count) {
+    public Watchlist setVote_count(String vote_count) {
         this.vote_count = vote_count;
+        return this;
     }
 
     public String getYoutube_trailer_key() {
         return youtube_trailer_key;
     }
 
-    public void setYoutube_trailer_key(String youtube_trailer_key) {
+    public Watchlist setYoutube_trailer_key(String youtube_trailer_key) {
         this.youtube_trailer_key = youtube_trailer_key;
+        return this;
     }
 
     public int getRuntime() {
         return runtime;
     }
 
-    public void setRuntime(int runtime) {
+    public Watchlist setRuntime(int runtime) {
         this.runtime = runtime;
+        return this;
     }
 
     public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public Watchlist setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+        return this;
     }
 
     public ArrayList<String> getStars() {
         return stars;
     }
 
-    public void setStars(ArrayList<String> stars) {
+    public Watchlist setStars(ArrayList<String> stars) {
         this.stars = stars;
+        return this;
     }
 
     public ArrayList<String> getDirectors() {
         return directors;
     }
 
-    public void setDirectors(ArrayList<String> directors) {
+    public Watchlist setDirectors(ArrayList<String> directors) {
         this.directors = directors;
+        return this;
     }
 
     public ArrayList<String> getCreators() {
         return creators;
     }
 
-    public void setCreators(ArrayList<String> creators) {
+    public Watchlist setCreators(ArrayList<String> creators) {
         this.creators = creators;
+        return this;
     }
 
     public ArrayList<String> getAdded_by() {
         return added_by;
     }
 
-    public void setAdded_by(ArrayList<String> added_by) {
+    public Watchlist setAdded_by(ArrayList<String> added_by) {
         this.added_by = added_by;
+        return this;
     }
 
     @Override
