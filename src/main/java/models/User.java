@@ -18,12 +18,13 @@ public class User {
     private String email;
     private String password;
     private Date createdAt = new Date();
-    private ArrayList<Watchlist> watchlistId;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private ArrayList<ObjectId> watchlistId;
 
     public User() {
     }
 
-    public User(ObjectId id, String firstName, String lastName, String username, String email, String password, Date createdAt, ArrayList<Watchlist> watchlistId) {
+    public User(ObjectId id, String firstName, String lastName, String username, String email, String password, Date createdAt, ArrayList<ObjectId> watchlistId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -97,11 +98,11 @@ public class User {
         return this;
     }
 
-    public ArrayList<Watchlist> getWatchlistId() {
+    public ArrayList<ObjectId> getWatchlistId() {
         return watchlistId;
     }
 
-    public User setWatchlistId(ArrayList<Watchlist> watchlistId) {
+    public User setWatchlistId(ArrayList<ObjectId> watchlistId) {
         this.watchlistId = watchlistId;
         return this;
     }

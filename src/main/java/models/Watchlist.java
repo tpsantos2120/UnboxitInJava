@@ -27,12 +27,11 @@ public class Watchlist {
     private ArrayList<String> stars;
     private ArrayList<String> directors;
     private ArrayList<String> creators;
-    private ArrayList<String> added_by;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private ArrayList<ObjectId> added_by;
 
-    public Watchlist() {
-    }
 
-    public Watchlist(ObjectId id, String poster, String media_type, String title, String description, String year, String release_date, String imdb_id, String imdb_rating, String vote_count, String youtube_trailer_key, int runtime, Date createdAt, ArrayList<String> stars, ArrayList<String> directors, ArrayList<String> creators, ArrayList<String> added_by) {
+    public Watchlist(ObjectId id, String poster, String media_type, String title, String description, String year, String release_date, String imdb_id, String imdb_rating, String vote_count, String youtube_trailer_key, int runtime, Date createdAt, ArrayList<String> stars, ArrayList<String> directors, ArrayList<String> creators, ArrayList<ObjectId> added_by) {
         this.id = id;
         this.poster = poster;
         this.media_type = media_type;
@@ -196,13 +195,12 @@ public class Watchlist {
         return this;
     }
 
-    public ArrayList<String> getAdded_by() {
+    public ArrayList<ObjectId> getAdded_by() {
         return added_by;
     }
 
-    public Watchlist setAdded_by(ArrayList<String> added_by) {
+    public void setAdded_by(ArrayList<ObjectId> added_by) {
         this.added_by = added_by;
-        return this;
     }
 
     @Override
