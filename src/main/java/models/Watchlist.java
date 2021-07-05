@@ -29,6 +29,29 @@ public class Watchlist {
     private ArrayList<String> creators;
     private ArrayList<String> added_by;
 
+    public Watchlist() {
+    }
+
+    public Watchlist(ObjectId id, String poster, String media_type, String title, String description, String year, String release_date, String imdb_id, String imdb_rating, String vote_count, String youtube_trailer_key, int runtime, Date createdAt, ArrayList<String> stars, ArrayList<String> directors, ArrayList<String> creators, ArrayList<String> added_by) {
+        this.id = id;
+        this.poster = poster;
+        this.media_type = media_type;
+        this.title = title;
+        this.description = description;
+        this.year = year;
+        this.release_date = release_date;
+        this.imdb_id = imdb_id;
+        this.imdb_rating = imdb_rating;
+        this.vote_count = vote_count;
+        this.youtube_trailer_key = youtube_trailer_key;
+        this.runtime = runtime;
+        this.createdAt = createdAt;
+        this.stars = stars;
+        this.directors = directors;
+        this.creators = creators;
+        this.added_by = added_by;
+    }
+
     public ObjectId getId() {
         return id;
     }

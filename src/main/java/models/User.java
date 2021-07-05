@@ -20,6 +20,20 @@ public class User {
     private Date createdAt = new Date();
     private ArrayList<Watchlist> watchlistId;
 
+    public User() {
+    }
+
+    public User(ObjectId id, String firstName, String lastName, String username, String email, String password, Date createdAt, ArrayList<Watchlist> watchlistId) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.watchlistId = watchlistId;
+    }
+
     public ObjectId getId() {
         return id;
     }
